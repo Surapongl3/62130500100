@@ -12,14 +12,35 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
     <!-- Vue CDN -->
+   
+   
     <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
   <title>Basic Vue Js - HelloWorld App</title>
 </head>
 <body>
-    <div id="app" class="h-screen w-full bg-gray-200 flex items-start justify-start">
-        <img src="./images/1.jpg" class="w-1/3 h-full">
+    <div id="app" >
+      <nav class="bg-black h-32">
+        <div class="container flex justify-center items-center p-5">
+        <div class="w-1/5 h-1/5 " >
+         <img src="./images/Steam.png" > 
+        </div>
+        <div class="flex font-serif text-gray-400 text-xl space-x-5"> 
+          <div>ร้านค้า</div>
+          <div>ชุมชน</div>
+          <div>เกี่ยวกับ</div>
+          <div>ฝ่ายสนับสนุน</div> 
+        </div>
+        </div>
+         
+       
+      </div> 
+      <!-- <div class=" font-serif text-gray-400 text-xl space-x-5">ติดตั้ง steam</div> -->
+      
+     
+      </nav>
+        
         <div class="w-full flex items-center justify-end">
-          <i class="material-icons">face</i>
+          
           <p class="font-semibold text-xl tracking-wider uppercase px-3"> {{ msg }}​​</p>
         </div>
     </div>
