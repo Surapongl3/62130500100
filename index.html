@@ -16,10 +16,29 @@
    
     <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
   <title>Basic Vue Js - HelloWorld App</title>
+  <style>.dropdown:hover .dropdown-menu {
+    display: block;
+    
+  }
+  .topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+input::placeholder{
+  color:black;
+  font-style: italic;
+}
+
+
+</style>
 </head>
 <body>
     <div id="app" >
-      <nav class="bg-black h-32">
+      <nav class="bg-gray-900 h-32">
         <div class="container flex justify-center items-center p-5">
         <div class="w-1/5 h-1/5 " >
          <img src="./images/Steam.png" > 
@@ -31,18 +50,64 @@
           <div>ฝ่ายสนับสนุน</div> 
         </div>
         </div>
-         
-       
-      </div> 
-      <!-- <div class=" font-serif text-gray-400 text-xl space-x-5">ติดตั้ง steam</div> -->
-      
-     
       </nav>
-        
-        <div class="w-full flex items-center justify-end">
+      <div class="  bg-blue-900 h-screen">
+        <div class="flex justify-around">
           
-          <p class="font-semibold text-xl tracking-wider uppercase px-3"> {{ msg }}​​</p>
+        <div></div> 
+         <nav class="flex justify-start bg-blue-700 h-12 w-8/12 my-10 space-x-6 ">
+         
+          <div class=" mt-1 ">
+            <div class="dropdown ">
+            <button class="text-white font-semibold py-2 px-4 rounded inline-flex items-center hover:bg-white hover:text-black">
+              <span class="mr-1">ร้านค้าของคุณ</span>
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+            </button>
+            <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+              <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">หน้าหลัก</a></li>
+              <li class=""><a class="bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">คำแนะนำ</a></li>
+              <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">เพิ่งดูล่าสุด</a></li>
+              <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">ผู้แนะนำบนสตรีม</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="ml-10 mt-1">
+          <div class="dropdown">
+          <button class="text-white font-semibold py-2 px-4 rounded inline-flex items-center hover:bg-white hover:text-black">
+            <span class="mr-1 ">เปิดหา</span>
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+          </button>
+          <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">เล่นฟรี</a></li>
+            <li class=""><a class="bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">เล่นระหว่างพัฒนา</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">เดโม่</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">เป็นมิตรต่อคอนโทรล</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">สำหรับคาเฟ่ PC</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-900 hover:text-white py-2 px-4 block whitespace-no-wrap" href="#">Remote Play</a></li>
+          </ul>
+        </div>
+      </div>
+          
+          <a href="" class="mt-1 pt-2 text-white hover:bg-white hover:text-black font-bold">ร้านค้าแต้ม</a>
+          <a href="" class="mt-1 pt-2 text-white hover:bg-white hover:text-black font-bold">ข่าวสาร</a>
+          <a href="" class="mt-1 pt-2 text-white hover:bg-white hover:text-black font-bold">แล็บ steam</a>
+          <div class="my-0.5  ">
+            <div class="bg-blue-500 px-0.5 py-0.5 ml-72">
+            <input id="store_nav_search_term" name="term" type="text" class="bg-blue-500 ml-2 " placeholder="ค้นหาบนร้านค้า" size="22" autocomplete="off">
+            <button class="bg-blue-300 p-1  search"><i class="material-icons">search</i></a></button>
+        </div>
+        </div>
+           
+           
+        </nav> 
+       
+        </div>
+      
+        
+       
+         
+        </div>
+      </div>
     </div>
     
     
